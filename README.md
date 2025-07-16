@@ -66,4 +66,8 @@ For your modifications you may introduce new class attributes or constants, as w
 
 Class `HashTableTest.java` provides simple testing to verify the correctness of your code.
 
+---
+
+## Reflect
+
 No homework was due for week 07.
