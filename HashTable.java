@@ -12,7 +12,7 @@ public class HashTable<E extends Comparable<E>> {
      * Underlying array of nodes. Each non empty element of this array is the first
      * node of a linked list.
      */
-    private Node[] underlying;
+    private Node<E>[] underlying;
 
     /** Counts how many places in the underlying array are occupied */
     private int usage;
@@ -55,10 +55,9 @@ public class HashTable<E extends Comparable<E>> {
      * 
      * @param content E The content of a new node, to be placed in the array.
      */
-    @SuppressWarnings("unchecked")
     public void add(E content) {
         // Create the new node to add to the hashtable
-        Node newNode = new Node<E>(content);
+        Node<E> newNode = new Node<E>(content);
         // Use the hashcode for the new node's contents to find where to place it in the
         // underlying array. Use abs in case hashcode < 0.
         int position = Math.abs(content.hashCode()) % this.underlying.length;
@@ -91,7 +90,7 @@ public class HashTable<E extends Comparable<E>> {
         // Initialize the StringBuilder object with basic info
         StringBuilder sb = new StringBuilder(
                 String.format(ARRAY_INFORMATION,
-                        this.underlying.length, this.usage));
+                        this.usage, this.underlying.length));
         sb.append(String.format(NODES_INFORMATION, this.totalNodes));
         // Iterate the array
         for (int i = 0; i < underlying.length; i++) {
