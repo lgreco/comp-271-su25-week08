@@ -37,7 +37,6 @@ In class `Hashtable`, we've introducted the following fields and constants:
 * `int usage` to count how many array elements are used. 
 * `double loadFactor` that tracks the utilization of the underlying array. The load factor is defined as<br/> $\text{load factor} = \dfrac{\text{usage}}{\text{underlying.array.length}}$<br/>
 * `final double LOAD_FACTOR_THRESHOLD` to indicate when to rehash the object. When `loadFactor >= LOAD_FACTOR_THRESHOLD` it is time to rehash the object.
-* `final int RESIZE_BY`
 
 To modify the object as demonstrated in class, you need to ensure the following.
 
@@ -62,6 +61,8 @@ There are a few ways to accomplish the steps above. Your objective is to *plan a
 The analysis, planning, and design of this problem's solution requires some thinking. Put your ideas together before you start coding, otherwise it will get a bit messy.
 
 Do not trust AI-generated solutions if you do not fully understand them. This assignment will most definitely be part of the oral 1-1 planned for the end of the course.
+
+For your modifications you may introduce new class attributes or constants, as well as methods. It is absolutely necessary that you document (with Javadoc comments) what these new members do and why they are needed.
 
 Class `HashTableTest.java` provides simple testing to verify the correctness of your code.
 
