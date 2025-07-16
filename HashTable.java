@@ -78,6 +78,21 @@ public class HashTable<E extends Comparable<E>> {
         this.totalNodes += 1;
     } // method add
 
+    /**
+     * Searches the underlying array of linked lists for the target value. If the
+     * target value is stored in the underlying array, the position of its
+     * corresponding linked list can be obtained immediately through the target's
+     * hashcode. The linked list must then be traversed to determine if a node with
+     * similar content and the target value is present or not.
+     * 
+     * @param target E value to searc for
+     * @return true if target value is present in one of the linked lists of the
+     *         underlying array; false otherwise.
+     */
+    public boolean contains(E target) {
+        return false;
+    } // method contains
+
     /** Constants for toString */
     private static final String LINKED_LIST_HEADER = "\n[ %2d ]: ";
     private static final String EMPTY_LIST_MESSAGE = "null";
